@@ -25,6 +25,7 @@ def find_aws_ip(aws_ip_range_data, ip_to_find):
             result = prefix.copy()
             result['first_ip'] = str(net.network_address)
             result['last_ip'] = str(net.broadcast_address)
+            result['ip_count'] = net.num_addresses
             out.append(result)
 
     return out
